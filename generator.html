@@ -1,0 +1,19 @@
+<script>
+var webhook_url = prompt("Please enter your webhook url");
+var msg = prompt("Please enter the message you want to send");
+var return_url = prompt("Please enter your return url");
+var username = prompt("Please enter the username you want to use for your webhook");
+var avatar_url = prompt("Please enter the image url you want to use for your webhook");
+
+let urlstart = "axelanse.github.io/Webhook-URL/send.html?webhookurl=";
+let result1 = urlstart.concat(webhook_url);
+let msgstart = "&msg=";
+let result2 = result1.concat(msgstart);
+let result3 = result2.concat(msg);
+let retstart = "&return_url=";
+let result4 = result3.concat(retstart);
+let result5 = result4.concat(return_url);
+let usrstart = "&username=";
+let result6 = result5.concat(usrstart);
+let result7 = result6.concat(username);
+</script>
