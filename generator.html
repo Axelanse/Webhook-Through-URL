@@ -20,12 +20,5 @@ let avtstart = "&avatar_url=";
 let result8 = result7.concat(avtstart);
 let result9 = result8.concat(avatar_url);
 
-var txt;
-var r = confirm("Do you want to copy your url?");
-if (r == true) {
-  copy(result9);
-  txt = "copied to clipboard!";
-} else {
-  console.log("didnt copy");
-}
+window.alert("your url: " + result9);
 </script>
