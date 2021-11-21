@@ -1,0 +1,26 @@
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const webhook = urlParams.get('webhookurl')
+const msg = urlParams.get('msg')
+const return_url = urlParams.get('return_url')
+const username = urlParams.get('username')
+const avatar_url = urlParams.get('avatar_url')
+
+      function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST", webhook);
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      const params = {
+        username: username,
+        avatar_url: avatar_url,
+        content: msg,
+      }
+
+      request.send(JSON.stringify(params));
+    }
+  sendmessage()
+  window.location.replace(return_url);
+</script>
