@@ -1,3 +1,6 @@
+<html>
+<body>
+<p id="p1">Your url will appear here</p>
 <script>
 var webhook_url = prompt("Please enter your webhook url");
 var msg = prompt("Please enter the message you want to send");
@@ -20,5 +23,8 @@ let avtstart = "&avatar_url=";
 let result8 = result7.concat(avtstart);
 let result9 = result8.concat(avatar_url);
 
-window.alert("your url: " + result9);
+document.getElementById("p1").innerHTML = "Your url: " + result9;
 </script>
+
+</body>
+</html>
